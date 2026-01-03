@@ -9,7 +9,7 @@ from telegram.ext import Application, CommandHandler, ContextTypes
 # ===== ENV VARIABLES =====
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 NEWS_API_KEY = os.getenv("NEWS_API_KEY")
-CHANNEL_ID = "@stockmarket_important_news"
+CHANNEL_ID =  os.getenv("CHANNEL_ID")
 
 IMPORTANT_KEYWORDS = [
     'fed','interest rate','inflation','gdp','earnings','profit','loss',
@@ -87,4 +87,5 @@ def main():
     app.run_polling()
 
 if _name_ == "_main_":
+
     main()
